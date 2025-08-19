@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Khizar Sultan - Senior AI/ML Engineer</title>
+  <meta name="description" content="Accomplished AI/ML Engineer with 6+ years experience. Generative AI, Agentic AI, LLMs, RAG, Chatbots. 7+ industrial projects across telecom, healthcare, insurance, retail, and cybersecurity. 2× Microsoft certified." />
+  <meta name="theme-color" content="#0b0b10" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Khizar Sultan — Senior AI/ML Engineer" />
+  <meta property="og:description" content="Generative AI, Agentic AI, LLMs, RAG, Chatbots. 6+ years experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            base: '#0b0b10',
+            ink: '#e6e7ea',
+            sub: '#9aa3b2',
+            brand: {
+              50:'#eef6ff',100:'#d9ecff',200:'#bfe0ff',300:'#99cdff',400:'#66b1ff',
+              500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a'
+            },
+            accent: {
+              400:'#34d399',500:'#22d3ee',600:'#06b6d4',700:'#0891b2'
+            },
+            glow: { pink:'#ff3d81', blue:'#4cc9f0', purple:'#a78bfa', teal:'#2dd4bf', amber:'#fbbf24' }
+          },
+          boxShadow: {
+            soft: '0 10px 30px -10px rgba(0,0,0,0.4)',
+            card: '0 8px 24px rgba(0,0,0,0.25)',
+            glow: '0 0 40px rgba(34,211,238,0.25)'
+          },
+          backdropBlur: { xs: '2px' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root { color-scheme: dark; }
+    html, body { color: #e6e7ea; position: relative; }
+    body { color: #e6e7ea; }
+
+    /* Glass cards */
+    .glass { background: rgba(10,12,18,0.62); border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 8px 24px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06); backdrop-filter: blur(10px) saturate(120%) brightness(0.88); }
+    .chip { border:1px solid rgba(255,255,255,0.18); background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06)); }
+
+    /* Buttons */
+    .btn { position: relative; display: inline-flex; align-items: center; gap: .5rem; padding: .6rem 1rem; border-radius: 9999px; font-weight: 600; color: #ffffff; background: linear-gradient(135deg, #2563eb 0%, #22d3ee 100%); border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 10px 25px rgba(34,211,238,0.18); transition: transform .18s ease, box-shadow .25s ease, filter .25s ease, background-position .35s ease; background-size: 150% 150%; }
+    .btn:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 14px 34px rgba(34,211,238,0.28); filter: brightness(1.06); background-position: 100% 0%; }
+    .btn:active { transform: translateY(0) scale(.98); }
+    .btn:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }
+    .btn.secondary { background: linear-gradient(135deg, #1f2937 0%, #0b0f1a 100%); border-color: rgba(255,255,255,0.28); box-shadow: 0 10px 25px rgba(0,0,0,0.35); }
+    .btn.ghost { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.24); }
+    .btn::after { content:""; position:absolute; inset:0; border-radius:inherit; background: radial-gradient(60% 100% at 10% 0%, rgba(255,255,255,.35), transparent 60%); opacity:0; transition: opacity .35s ease; }
+    .btn:hover::after { opacity:.8; }
+
+    /* Header glass & nav links */
+    .header-glass { backdrop-filter: blur(12px) saturate(125%); background: rgba(10,12,18,0.55); border-bottom: 1px solid rgba(255,255,255,0.1); transition: background .25s ease, border-color .25s ease, box-shadow .25s ease; }
+    .header-glass.scrolled { background: rgba(10,12,18,0.86); border-color: rgba(255,255,255,0.18); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+    .nav-link { color:#cbd5e1; transition: color .2s ease; }
+    .nav-link:hover { color:#ffffff; }
+
+    /* Background canvases */
+    #aurora { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+    #bg3d { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+    #scrim { position: fixed; inset: 0; z-index: 5; pointer-events: none; background: linear-gradient(180deg, rgba(7,9,14,0.48) 0%, rgba(7,9,14,0.64) 35%, rgba(7,9,14,0.82) 100%); }
+
+    /* Link underline effect */
+    .u { position: relative; }
+    .u::after { content:''; position:absolute; left:0; bottom:-2px; width:100%; height:1px; background: linear-gradient(90deg, #22d3ee, #a78bfa); transform: scaleX(0); transform-origin:left; transition:.35s; }
+    .u:hover::after { transform: scaleX(1); }
+
+    /* Readability helpers */
+    .text-sub { color: #cbd5e1 !important; }
+    h1, h2, h3 { text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 10px; height:10px }
+    ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 999px; }
+
+    /* Navigation Button - Professional Muted Style */
+    .nav-btn {
+      display: inline-block;
+      padding: 0.55rem 1.1rem;
+      margin-right: 0.25rem;
+      border-radius: 0.7rem;
+      background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+      color: #f1f5f9 !important;
+      font-weight: 600;
+      border: 1px solid #475569;
+      box-shadow: 0 2px 8px rgba(34,211,238,0.06);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+      text-decoration: none;
+    }
+    .nav-btn:hover, .nav-btn:focus {
+      background: linear-gradient(135deg, #2563eb 0%, #334155 100%);
+      color: #fff !important;
+      box-shadow: 0 4px 16px rgba(34,211,238,0.10);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .hero-btn {
+      width: 170px !important;
+      height: 44px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 !important;
+      line-height: normal !important;
+      font-size: 1rem !important;
+      box-sizing: border-box;
+      border-radius: 9999px !important;
+      margin: 0 !important;
+      border-width: 0 !important;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Khizar Sultan",
+    "jobTitle": "Senior AI/ML Engineer",
+    "email": "mailto:khizarsultan.datascientist@gmail.com",
+    "url": "https://www.linkedin.com/in/khizar-aiengineer/",
+    "sameAs": [
+      "https://github.com/KhizarSultan",
+      "https://www.linkedin.com/in/khizar-aiengineer/"
+    ]
+  }
+  </script>
+</head>
+
+<body class="min-h-screen antialiased">
+  <!-- Dynamic Aurora gradient canvas -->
+  <canvas id="aurora"></canvas>
+  <!-- Three.js background (stars + lights + moving objects) -->
+  <div id="bg3d"></div>
+  <div id="scrim"></div>
+
+  <!-- App wrapper -->
+  <div id="app" class="relative z-10 pt-20">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 header-glass">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center py-4 gap-3">
+        <a href="#home" class="brand text-xl font-semibold tracking-tight">Khizar <span class="text-brand-400">Sultan</span></a>
+        <div class="hidden md:flex items-center gap-3 ml-6">
+          <a href="#about" class="nav-btn">About</a>
+          <a href="#skills" class="nav-btn">Skills</a>
+          <a href="#experience" class="nav-btn">Experience</a>
+          <a href="#projects" class="nav-btn">Projects</a>
+          <a href="#education" class="nav-btn">Education</a>
+          <a href="#certs" class="nav-btn">Certifications</a>
+          <a href="#contact" class="nav-btn">Contact</a>
+          <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Meeting+with+Khizar+Sultan&details=Let%27s+schedule+a+meeting+to+discuss+AI%2FML+projects.&sf=true" target="_blank" class="inline-flex items-center px-4 py-2 rounded-lg font-semibold bg-gradient-to-r from-brand-600 to-accent-500 text-white shadow-lg transition duration-200 hover:from-brand-700 hover:to-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-400 whitespace-nowrap">Schedule Meeting</a>
+        </div>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-white/10 bg-gradient-to-r from-brand-600 to-accent-500 text-white shadow-lg transition duration-200 hover:from-brand-700 hover:to-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-400 ml-auto">☰</button>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <div class="glass rounded-xl p-4 space-y-2 text-sub">
+          <a class="block" href="#about">About</a>
+          <a class="block" href="#skills">Skills</a>
+          <a class="block" href="#experience">Experience</a>
+          <a class="block" href="#projects">Projects</a>
+          <a class="block" href="#education">Education</a>
+          <a class="block" href="#certs">Certifications</a>
+          <a class="block" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center py-16 lg:py-24">
+        <div>
+          <p class="text-sm uppercase tracking-[.25em] text-sub"> <strong>Senior AI/ML Engineer</strong></p>
+          <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+            Generative AI, Agentic AI, <span class="text-brand-400">LLMs</span>, <span class="text-accent-500">RAG</span> & Chatbots.
+          </h1>
+          <p class="mt-5 text-sub ">Accomplished engineer with <strong>6+ years</strong> experience and a Master’s in Data Science. Delivered <strong>7+ industrial projects</strong> across telecom, healthcare, insurance, retail, and cybersecurity. <strong>2× Microsoft‑certified</strong> (Azure AI & Data Fundamentals) and contributor to <strong>20+ open‑source</strong> projects.</p>
+
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            <div class="glass rounded-xl p-4">
+              <div class="text-2xl font-bold">6+ yrs</div>
+              <div class="text-xs text-sub">Experience</div>
+            </div>
+            <div class="glass rounded-xl p-4">
+              <div class="text-2xl font-bold">7+</div>
+              <div class="text-xs text-sub">Industrial Projects</div>
+            </div>
+            <div class="glass rounded-xl p-4">
+              <div class="text-2xl font-bold">2×</div>
+              <div class="text-xs text-sub">Microsoft Certified</div>
+            </div>
+            <div class="glass rounded-xl p-4">
+              <div class="text-2xl font-bold">20+</div>
+              <div class="text-xs text-sub">Open‑source Repos</div>
+            </div>
+          </div>
+          <div class="mt-7 flex items-center justify-center gap-3">
+            <a class="nav-btn" href="mailto:khizarsultan.datascientist@gmail.com">Email</a>
+            <a class="nav-btn ghost" target="_blank" href="https://www.linkedin.com/in/khizar-aiengineer/">LinkedIn</a>
+            <a class="nav-btn ghost" target="_blank" href="https://github.com/KhizarSultan?tab=repositories">GitHub</a>
+            <a class="nav-btn" href="Khizar-Sultan.pdf" download>Resume</a>
+          </div>
+        </div>
+        <div class="relative min-h-[380px] md:min-h-[520px]">
+          <div id="nn-wrap" class="absolute inset-0 rounded-2xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-12 lg:py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="glass rounded-2xl p-8 md:p-10 shadow-card">
+        <h2 class="text-2xl font-bold">Professional Summary</h2>
+        <p class="mt-4 text-sub leading-relaxed">Accomplished AI/ML Engineer with 6+ years of experience and a Master’s in Data Science. Delivered 7+ industrial AI/ML projects across telecom, healthcare, insurance, retail, and cybersecurity. Proficient in Python, Generative AI, Agentic AI, Chatbots, and LLMs. 2× Microsoft‑certified in Azure AI and Data Fundamentals with 20+ open‑source projects on GitHub showcasing AI/ML expertise.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-6 lg:py-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-8">
+          <h3 class="text-xl font-semibold">Generative AI & Agents</h3>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="chip px-3 py-1 rounded-full">LangChain</span>
+            <span class="chip px-3 py-1 rounded-full">LangGraph</span>
+            <span class="chip px-3 py-1 rounded-full">Model Context Protocol (MCP)</span>
+            <span class="chip px-3 py-1 rounded-full">Agentic AI</span>
+            <span class="chip px-3 py-1 rounded-full">LLMs (OpenAI, Claude, Gemini, Grok)</span>
+            <span class="chip px-3 py-1 rounded-full">RAG</span>
+            <span class="chip px-3 py-1 rounded-full">Chatbots</span>
+            <span class="chip px-3 py-1 rounded-full">n8n</span>
+            <span class="chip px-3 py-1 rounded-full">FastAPI</span>
+            <span class="chip px-3 py-1 rounded-full">FAISS / Milvus</span>
+            <span class="chip px-3 py-1 rounded-full">Vector Databases</span>
+            <span class="chip px-3 py-1 rounded-full">Prompt Eng & Eval</span>
+            <span class="chip px-3 py-1 rounded-full">Mosaic AI (Databricks)</span>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-8">
+          <h3 class="text-xl font-semibold">Machine Learning & MLOps</h3>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="chip px-3 py-1 rounded-full">Python</span>
+            <span class="chip px-3 py-1 rounded-full">Transformers</span>
+            <span class="chip px-3 py-1 rounded-full">TensorFlow</span>
+            <span class="chip px-3 py-1 rounded-full">PyTorch</span>
+            <span class="chip px-3 py-1 rounded-full">Pandas / NumPy</span>
+            <span class="chip px-3 py-1 rounded-full">Keras</span>
+            <span class="chip px-3 py-1 rounded-full">Docker</span>
+            <span class="chip px-3 py-1 rounded-full">Flask / FastAPI</span>
+            <span class="chip px-3 py-1 rounded-full">AWS (SageMaker, S3, EC2)</span>
+            <span class="chip px-3 py-1 rounded-full">Azure ML</span>
+            <span class="chip px-3 py-1 rounded-full">Databricks Apps</span>
+            <span class="chip px-3 py-1 rounded-full">MLOps</span>
+            <span class="chip px-3 py-1 rounded-full">Data/Concept Drift</span>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-8">
+          <h3 class="text-xl font-semibold">Leadership & Communication</h3>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="chip px-3 py-1 rounded-full">Problem‑solving</span>
+            <span class="chip px-3 py-1 rounded-full">Collaboration</span>
+            <span class="chip px-3 py-1 rounded-full">Teamwork</span>
+            <span class="chip px-3 py-1 rounded-full">Conflict Resolution</span>
+            <span class="chip px-3 py-1 rounded-full">Innovation</span>
+            <span class="chip px-3 py-1 rounded-full">Verbal & Written Communication</span>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-8">
+          <h3 class="text-xl font-semibold">Languages</h3>
+          <p class="mt-4 text-sub">English (Professional)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-8 lg:py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Work Experience</h2>
+      <div class="space-y-6">
+        <!-- NETSOL -->
+        <div class="glass rounded-2xl p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-xl font-semibold">Sr. AI/ML Engineer — Gen AI</h3>
+            <span class="text-xs text-sub">NETSOL Technologies · Pakistan · 09/2024 — Present</span>
+          </div>
+          <ul class="mt-3 list-disc pl-5 text-sub space-y-2">
+            <li>Built a conversational chatbot for a car lease company using Generative AI, LLMs, RAG, and LangChain; deployed with FastAPI, Docker, and AWS EC2 — <strong>increased car sales by 15%</strong> post‑deployment.</li>
+            <li>Developed a RAG‑based teacher assistant with LangChain, LangGraph, and Agentic AI to query submissions and auto‑email non‑submitters — <strong>saved ~5 hours/day per teacher</strong>.</li>
+            <li>Designed an <strong>MCP server</strong> using GoFastMCP, integrated with OpenAI and Claude Desktop; implemented intelligent tool calls and counter‑questioning for improved contextual accuracy.</li>
+            <li>Architected an <strong>API gateway on Databricks</strong> leveraging Mosaic AI to route user queries to the most relevant LLM automatically, reducing manual overhead.</li>
+          </ul>
+        </div>
+        <!-- SlashNext -->
+        <div class="glass rounded-2xl p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-xl font-semibold">AI/ML Engineer — Gen AI</h3>
+            <span class="text-xs text-sub">SlashNext Inc · Pakistan · 07/2022 — 09/2024</span>
+          </div>
+          <ul class="mt-3 list-disc pl-5 text-sub space-y-2">
+            <li>Fine‑tuned LLMs (incl. Llama‑2) for domain‑specific data generation with chain‑of‑thought prompting — achieved <strong>99% accuracy</strong> in malicious SMS generation.</li>
+            <li>Led BERT‑based SMS classification achieving <strong>98% accuracy</strong> and contributing to a <strong>40% decrease</strong> in cybersecurity attacks.</li>
+            <li>Implemented end‑to‑end CI/CD pipelines for text processing, model training, evaluation, and deployment — <strong>25% reduction</strong> in train/test/deploy time.</li>
+            <li>Monitored production models and communicated progress via email, Confluence, reports, and presentations; collaborated with stakeholders to integrate new AI/NLP models into production systems.</li>
+          </ul>
+        </div>
+        <!-- Retailo -->
+        <div class="glass rounded-2xl p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-xl font-semibold">Data Scientist — AI/ML Engineer</h3>
+            <span class="text-xs text-sub">Retailo Technologies · Pakistan · 12/2021 — 06/2022</span>
+          </div>
+          <ul class="mt-3 list-disc pl-5 text-sub space-y-2">
+            <li>Built a recommendation engine (Collaborative Filtering) contributing to <strong>$1M revenue</strong>.</li>
+            <li>Extracted/cleaned sales data from AWS Redshift with Python; engineered features using Pandas/NumPy; improved prediction accuracy with RF/GBMs.</li>
+            <li>Optimized storage with compression and indexing — <strong>40% faster</strong> access times; added KPI tracking to quantify impact.</li>
+          </ul>
+        </div>
+        <!-- Addo.ai -->
+        <div class="glass rounded-2xl p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="text-xl font-semibold">Associate Data Scientist — AI/ML Engineer</h3>
+            <span class="text-xs text-sub">Addo.ai · Pakistan · 10/2020 — 12/2021</span>
+          </div>
+          <ul class="mt-3 list-disc pl-5 text-sub space-y-2">
+            <li>Delivered solutions for international clients (Singtel, ComfortDelGro) — <strong>15% efficiency boost</strong>.</li>
+            <li>Participated in daily scrums — reduced project turnaround by <strong>10%</strong>.</li>
+            <li>Used Python/easyocr/numpy/pandas/matplotlib/sklearn — <strong>25% reduction</strong> in data processing time.</li>
+            <li>Trained/validated ML models and deployed via Docker/Kubernetes — <strong>20% faster</strong> deployments and <strong>30% higher</strong> model accuracy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-10 lg:py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Industry Projects</h2>
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">Enterprise Conversational RAG Chatbot</h3>
+          <p class="mt-2 text-xs text-sub">LLMs, RAG, LangChain, LangGraph, Agentic AI · FastAPI · Docker · AWS EC2</p>
+          <p class="mt-3 text-sub"><strong>Objective:</strong> Handle complex business queries and automate workflows.</p>
+          <p class="mt-2 text-sub"><strong>Approach:</strong> Context‑aware interactions; task automation (emailing non‑submitters, retrieving student data); scalable deployment.</p>
+          <p class="mt-2 text-sub"><strong>Impact:</strong> <strong>+30% user engagement</strong> and reduced manual effort across ops.</p>
+        </article>
+        <!-- Project 2 -->
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">Car Lease Sales Chatbot</h3>
+          <p class="mt-2 text-xs text-sub">Generative AI, LLMs, RAG · LangChain · FastAPI · Docker · AWS</p>
+          <p class="mt-3 text-sub"><strong>Objective:</strong> Drive sales with personalized conversational assistance.</p>
+          <p class="mt-2 text-sub"><strong>Approach:</strong> Retrieval‑augmented grounding, lead qualification, and quote assistance.</p>
+          <p class="mt-2 text-sub"><strong>Impact:</strong> <strong>+15% car sales</strong> post‑deployment.</p>
+        </article>
+        <!-- Project 3 -->
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">Teacher Assistant RAG Agent</h3>
+          <p class="mt-2 text-xs text-sub">LangChain · LangGraph · Agentic AI · Email Automation</p>
+          <p class="mt-3 text-sub"><strong>Objective:</strong> Query and manage student submissions automatically.</p>
+          <p class="mt-2 text-sub"><strong>Approach:</strong> Agent tools for data lookup and batch emailing; guardrails and evals.</p>
+          <p class="mt-2 text-sub"><strong>Impact:</strong> Saves <strong>~5 hours/day</strong> per teacher.</p>
+        </article>
+        <!-- Project 4 -->
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">Malicious SMS Classification (NLP)</h3>
+          <p class="mt-2 text-xs text-sub">BERT · Transformers · Python · CI/CD</p>
+          <p class="mt-3 text-sub"><strong>Objective:</strong> Detect malicious SMS to enhance mobile security.</p>
+          <p class="mt-2 text-sub"><strong>Approach:</strong> BERT fine‑tuning with domain data and CoT prompts.</p>
+          <p class="mt-2 text-sub"><strong>Impact:</strong> <strong>98% accuracy</strong>; <strong>40% fewer</strong> cyber attacks.</p>
+        </article>
+        <!-- Project 5 -->
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">Malicious Email Classification</h3>
+          <p class="mt-2 text-xs text-sub">TF‑IDF / Word2Vec · Anomaly Detection · Random Forest</p>
+          <p class="mt-3 text-sub"><strong>Objective:</strong> Detect and classify malicious vs. benign emails.</p>
+          <p class="mt-2 text-sub"><strong>Approach:</strong> Feature extraction from subject/body/sender; supervised + anomaly detection.</p>
+          <p class="mt-2 text-sub"><strong>Impact:</strong> <strong>95% accuracy</strong>; <strong>40% reduction</strong> in malicious emails reaching users.</p>
+        </article>
+        <!-- Project 6 -->
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">MCP Server for Intelligent Tool Orchestration</h3>
+          <p class="mt-2 text-xs text-sub">GoFastMCP · OpenAI · Claude Desktop</p>
+          <p class="mt-3 text-sub"><strong>Objective:</strong> Improve multi‑model AI with dynamic tool calling.</p>
+          <p class="mt-2 text-sub"><strong>Approach:</strong> Counter‑questioning & context routing for accurate tool selection.</p>
+          <p class="mt-2 text-sub"><strong>Impact:</strong> Higher response accuracy and reduced manual tool invocation.</p>
+        </article>
+        <!-- Project 7 -->
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">OCR Identity Card Extraction</h3>
+          <p class="mt-2 text-xs text-sub">easyocr · Python</p>
+          <p class="mt-3 text-sub"><strong>Objective:</strong> Extract name/DOB/address/ID fields from ID cards.</p>
+          <p class="mt-2 text-sub"><strong>Approach:</strong> Image preprocessing + deep‑learning OCR pipeline.</p>
+          <p class="mt-2 text-sub"><strong>Impact:</strong> <strong>40% faster</strong> verification for gov/banking/travel flows.</p>
+        </article>
+        <!-- Project 8 -->
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">Retail Recommendation Engine</h3>
+          <p class="mt-2 text-xs text-sub">Collaborative Filtering · AWS Redshift · Python</p>
+          <p class="mt-3 text-sub"><strong>Objective:</strong> Personalize product recommendations.</p>
+          <p class="mt-2 text-sub"><strong>Approach:</strong> Data ingestion/feature engineering; CF modeling; KPI tracking.</p>
+          <p class="mt-2 text-sub"><strong>Impact:</strong> Contributed to <strong>$1M revenue</strong>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-8 lg:py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-6">Education</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">M.Sc. Data Science</h3>
+          <p class="text-sub">University of Management and Technology — Pakistan (07/2021 — 07/2023)</p>
+          <p class="mt-2 text-sub text-sm">Major Courses: AI, NLP, Data Science, Machine Learning, Deep Learning, Computer Vision</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">B.Sc. Computer Science</h3>
+          <p class="text-sub">National University of Computer and Emerging Sciences — Pakistan (07/2016 — 07/2020)</p>
+          <p class="mt-2 text-sub text-sm">Major Courses: DSA, Programming, Statistics & Probability, Calculus, Linear Algebra, Data Mining</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Certifications -->
+  <section id="certs" class="py-8 lg:py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Awards</h3>
+          <ul class="mt-3 list-disc pl-5 text-sub space-y-1">
+            <li>Dean’s List Award (NUCES)</li>
+            <li>Arctic Code Vault Contributor (GitHub)</li>
+          </ul>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Certifications & MOOCs</h3>
+          <ul class="mt-3 list-disc pl-5 text-sub space-y-1">
+            <li>Microsoft Azure Certified — Artificial Intelligence Fundamentals</li>
+            <li>Microsoft Azure Certified — Data Fundamentals</li>
+            <li>Machine Learning Specialization — University of Washington</li>
+            <li>MLOps Specialization — DeepLearning.AI</li>
+            <li>Deep Learning Specialization — DeepLearning.AI</li>
+            <li>Data Science Specialization — University of Michigan</li>
+          </ul>
+          <div class="flex flex-wrap gap-4 mt-6 items-center">
+            <img src="azure_data.png" alt="Microsoft Certified: Azure Data Fundamentals" class="h-16 w-auto rounded shadow-md bg-white p-1" />
+            <img src="azure-ai.png" alt="Microsoft Certified: Azure AI Fundamentals" class="h-16 w-auto rounded shadow-md bg-white p-1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-10 lg:py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="glass rounded-2xl p-8 md:p-10 text-center">
+        <h2 class="text-2xl font-bold">Let’s build something impactful</h2>
+        <p class="mt-3 text-sub">Open to full‑time and contract roles in Generative AI, Agentic AI, LLMs, and ML systems.</p>
+        <div class="mt-6 flex items-center justify-center gap-3">
+          <a class="nav-btn" href="mailto:khizarsultan.datascientist@gmail.com">Email</a>
+          <a class="nav-btn" target="_blank" href="https://www.linkedin.com/in/khizar-aiengineer/">LinkedIn</a>
+          <a class="nav-btn" target="_blank" href="https://github.com/KhizarSultan?tab=repositories">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-xs text-sub">
+    <p>© <span id="year"></span> Khizar Sultan. All rights reserved.</p>
+  </footer>
+  </div>
+
+  <!-- Vendor scripts -->
+  <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <script>
+  // --- Aurora gradient background (2D Canvas) ---
+  (function aurora(){
+    const c = document.getElementById('aurora');
+    const ctx = c.getContext('2d');
+    let w, h, t = 0;
+    function resize(){ w = c.width = window.innerWidth; h = c.height = window.innerHeight; }
+    window.addEventListener('resize', resize, {passive:true}); resize();
+    function wave(y, o, c1, c2){
+      const g = ctx.createLinearGradient(0, y, w, y);
+      g.addColorStop(0, c1); g.addColorStop(1, c2);
+      ctx.fillStyle = g; ctx.beginPath();
+      ctx.moveTo(0, h);
+      for(let x=0; x<=w; x+=8){
+        const yy = y + Math.sin((x+o+t)*0.002)*30 + Math.cos((x-o-t)*0.0015)*20;
+        ctx.lineTo(x, yy);
+      }
+      ctx.lineTo(w, h); ctx.closePath(); ctx.fill();
+    }
+    function draw(){
+      ctx.clearRect(0,0,w,h);
+      wave(h*0.6,  0,   'rgba(34,211,238,0.10)','rgba(167,139,250,0.05)');
+      wave(h*0.5,  400, 'rgba(59,130,246,0.12)','rgba(45,212,191,0.06)');
+      wave(h*0.4, -300, 'rgba(251,191,36,0.08)','rgba(76,201,240,0.04)');
+      t+=1.2; requestAnimationFrame(draw);
+    }
+      draw();
+  })();
+
+  // --- 3D background with Three.js (stars + moving lights + shapes) ---
+  (function initBG(){
+    const container = document.getElementById('bg3d');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 0, 18);
+
+    const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
+    container.appendChild(renderer.domElement);
+
+    // Star field
+    const starGeom = new THREE.BufferGeometry();
+    const starCnt = 1200;
+    const starPos = new Float32Array(starCnt*3);
+    for(let i=0;i<starCnt;i++){
+      starPos[i*3+0] = (Math.random()-0.5)*200;
+      starPos[i*3+1] = (Math.random()-0.5)*200;
+      starPos[i*3+2] = (Math.random()-0.5)*200;
+    }
+    starGeom.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+    const stars = new THREE.Points(starGeom, new THREE.PointsMaterial({ size: 0.6, color: 0x66b1ff }));
+    scene.add(stars);
+
+    // Ground grid (wireframe)
+    const grid = new THREE.GridHelper(200, 60, 0x113355, 0x112233);
+    grid.position.y = -10; scene.add(grid);
+
+    // Moving lights
+    const p1 = new THREE.PointLight(0x22d3ee, 2, 60); scene.add(p1);
+    const p2 = new THREE.PointLight(0xa78bfa, 1.5, 60); scene.add(p2);
+    const p3 = new THREE.PointLight(0xfbbf24, 1.2, 60); scene.add(p3);
+
+    // Floating shapes
+    const mat = new THREE.MeshPhysicalMaterial({ color: 0x1e40af, metalness: 0.3, roughness: 0.4, clearcoat: 0.2 });
+    const knot = new THREE.Mesh(new THREE.TorusKnotGeometry(2.2, 0.5, 120, 16), mat); knot.position.set(-6, 2, -6); scene.add(knot);
+    const ico  = new THREE.Mesh(new THREE.IcosahedronGeometry(2.1, 0), new THREE.MeshStandardMaterial({ color: 0x2dd4bf, metalness:0.2, roughness:0.5 })); ico.position.set(7, -1, -4); scene.add(ico);
+    const torus= new THREE.Mesh(new THREE.TorusGeometry(2.6, 0.35, 16, 80), new THREE.MeshStandardMaterial({ color: 0x66b1ff, metalness:0.25, roughness:0.5 })); torus.position.set(0, 4, -10); scene.add(torus);
+
+    const amb = new THREE.AmbientLight(0x334155, 0.6); scene.add(amb);
+
+    let mx=0, my=0; window.addEventListener('mousemove', (e)=>{ mx = (e.clientX/window.innerWidth - 0.5)*2; my = (e.clientY/window.innerHeight - 0.5)*2; }, {passive:true});
+    window.addEventListener('resize', ()=>{ camera.aspect = window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight); }, {passive:true});
+
+    function animate(t){
+      const tt = t*0.001;
+      p1.position.set(Math.sin(tt*0.8)*12, Math.cos(tt*1.1)*6, Math.cos(tt*0.7)*-8);
+      p2.position.set(Math.cos(tt*0.6)*10, Math.sin(tt*0.9)*7, Math.sin(tt*0.5)*-6);
+      p3.position.set(Math.sin(tt*0.4)*8, Math.cos(tt*0.7)*5, Math.cos(tt*0.9)*-5);
+
+      stars.rotation.y += 0.0006;
+      knot.rotation.x += 0.003; knot.rotation.y += 0.004;
+      ico.rotation.y -= 0.002; torus.rotation.x += 0.0025;
+
+      camera.position.x += (mx*1.5 - camera.position.x)*0.02;
+      camera.position.y += (-my*1.0 - camera.position.y)*0.02;
+      camera.lookAt(0,0,0);
+
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+    animate(0);
+  })();
+
+  // --- Hero "Neural Graph" widget ---
+  ;(function initNeural(){
+    const wrap = document.getElementById('nn-wrap');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, wrap.clientWidth / wrap.clientHeight, 0.1, 100);
+    camera.position.set(0, 0, 18);
+
+    const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
+    renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+    renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
+    wrap.appendChild(renderer.domElement);
+
+    const group = new THREE.Group(); scene.add(group);
+
+    // Nodes on a sphere
+    const nodes = []; const lines = [];
+    const nodeMat = new THREE.MeshStandardMaterial({ color: 0x22d3ee, emissive: 0x0b6b77, emissiveIntensity: 0.6 });
+    for(let i=0;i<80;i++){
+      const phi = Math.acos(2*Math.random()-1); const theta = Math.random()*Math.PI*2; const r = 7;
+      const pos = new THREE.Vector3( r*Math.sin(phi)*Math.cos(theta), r*Math.cos(phi), r*Math.sin(phi)*Math.sin(theta) );
+      const m = new THREE.Mesh(new THREE.SphereGeometry(0.15, 12, 12), nodeMat);
+      m.position.copy(pos); group.add(m); nodes.push(m);
+    }
+    const lineMat = new THREE.LineBasicMaterial({ color: 0xa78bfa, transparent:true, opacity:0.5 });
+    for(let i=0;i<140;i++){
+      const a = nodes[Math.floor(Math.random()*nodes.length)].position;
+      const b = nodes[Math.floor(Math.random()*nodes.length)].position;
+      const g = new THREE.BufferGeometry().setFromPoints([a,b]);
+      const l = new THREE.Line(g, lineMat); group.add(l); lines.push(l);
+    }
+
+    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+    const dl = new THREE.DirectionalLight(0x66b1ff, 1); dl.position.set(3,5,10); scene.add(dl);
+
+    let mx=0,my=0; wrap.addEventListener('mousemove', e=>{ const r=wrap.getBoundingClientRect(); mx = (e.clientX-r.left)/r.width - 0.5; my = (e.clientY-r.top)/r.height - 0.5; }, {passive:true});
+    function onResize(){ renderer.setSize(wrap.clientWidth, wrap.clientHeight); camera.aspect = wrap.clientWidth/wrap.clientHeight; camera.updateProjectionMatrix(); }
+    window.addEventListener('resize', onResize, {passive:true});
+
+    function animate(){ group.rotation.y += 0.002; group.rotation.x += 0.001; group.position.x += (mx*1.2 - group.position.x)*0.02; group.position.y += (-my*1.2 - group.position.y)*0.02; renderer.render(scene, camera); requestAnimationFrame(animate); }
+    animate();
+  })();
+
+  // --- UI: menu toggle & smooth scroll & year ---$1)();
+
+  // --- Header scroll state + entrance animations ---
+  (function uiHeader(){
+    const header = document.querySelector('header.header-glass');
+    const set = ()=> header && header.classList.toggle('scrolled', window.scrollY > 10);
+    window.addEventListener('scroll', set, {passive:true}); set();
+
+    if (window.gsap){
+      gsap.from('header .brand', { y:-12, opacity:0, duration:.5, ease:'power2.out' });
+      gsap.from('header nav a', { y:-12, opacity:0, duration:.5, ease:'power2.out', stagger:.06, delay:.05 });
+      gsap.from('.btn', { y:8, opacity:0, duration:.5, ease:'power2.out', stagger:.05, delay:.15 });
+    }
+  })();
+  </script>
+</body>
+</html>
